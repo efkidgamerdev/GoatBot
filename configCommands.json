@@ -1,32 +1,99 @@
 {
-	"commandBanned": {},
-	"envGlobal": {
-		"weatherApiKey": "d7e795ae6a0d44aaa8abb1a0a7ac19e4",
-		"goatbotApikey": ""
-	},
-	"envCommands": {
-		"daily": {
-			"rewardDay1": {
-				"coin": 100,
-				"exp": 10
-			}
-		},
-		"notification": {
-			"delayPerGroup": 250
-		},
-		"rank": {
-			"deltaNext": 5
-		},
-		"rankup": {
-			"deltaNext": 5
-		},
-		"appstore": {
-			"limitResult": 3
-		}
-	},
-	"envEvents": {
-		"logsbot": {
-			"allow": true
-		}
-	}
+  "commandBanned": {},
+  "envGlobal": {
+    "weatherApiKey": "d7e795ae6a0d44aaa8abb1a0a7ac19e4",
+    "goatbotApikey": ""
+  },
+  "envCommands": {
+    "daily": {
+      "rewardFirstDay": {
+        "coin": 100,
+        "exp": 10
+      }
+    },
+    "notification": {
+      "delayPerGroup": 250
+    },
+    "rank": {
+      "deltaNext": 5
+    },
+    "rankup": {
+      "deltaNext": 5
+    },
+    "appstore": {
+      "limitResult": 3
+    },
+    "dhbc": {
+      "reward": 1000
+    },
+    "qr": {},
+    "quiz": {
+      "reward": 0
+    },
+    "notice": {
+      "delayPerGroup": 250
+    },
+    "announce": {
+      "delayPerGroup": 250
+    },
+    "info": {},
+    "pokebot": {
+      "deltaNext": 5
+    },
+    "spellingbee": {
+      "reward": 30
+    },
+    "antiout": {
+      "deltaNext": 5
+    },
+    "job": {
+      "rewardFirstDay": {
+        "coin": 100,
+        "exp": 10
+      }
+    },
+    "tokengetter": {
+      "autoUnsend": true,
+      "delayUnsend": 300
+    },
+    "country": {
+      "reward": 500
+    }
+  },
+  "envEvents": {
+    "logsbot": {
+      "allow": true
+    }
+  },
+  "commandUnload": [
+    "hentaivid.js",
+    "lyrics2.js",
+    "motivate.js",
+    "offbot.js",
+    "dhbc.js",
+    "tik.js",
+    "bankinstaller.js",
+    "supportgc.js",
+    "hentai2.js",
+    "haha.js",
+    "redroom.js",
+    "autoreactv3.js",
+    "autoreact.js",
+    "tokengetter.js",
+    "fbtoken.js",
+    "aiv5.js",
+    "gptv1.js",
+    "aiv2.js",
+    "bardv1.js",
+    "ai2.js",
+    "blackbox.js",
+    "aiv3.js",
+    "pinterest.js",
+    "aiv6.js",
+    "aiv9.js",
+    "0blackbox1.js",
+    "aiv8.js",
+    "aiv4.js",
+    "aiv0.js"
+  ]
 }

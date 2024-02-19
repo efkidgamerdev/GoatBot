@@ -4,27 +4,27 @@ module.exports = {
 	config: {
 		name: "emojimix",
 		version: "1.3",
-		author: "NTKhang",
+		author: "Jay",
 		countDown: 5,
 		role: 0,
 		shortDescription: "Mix 2 emoji",
 		longDescription: {
-			vi: "Mix 2 emoji lại với nhau",
+			vi: "Mix 2 emoji láº¡i vá»›i nhau",
 			en: "Mix 2 emoji together"
 		},
 		guide: {
 			vi: "   {pn} <emoji1> <emoji2>"
-				+ "\n   Ví dụ:  {pn} 🤣 🥰",
+				+ "\n   VÃ­ dá»¥:  {pn} ðŸ¤£ ðŸ¥°",
 			en: "   {pn} <emoji1> <emoji2>"
-				+ "\n   Example:  {pn} 🤣 🥰"
+				+ "\n   Example:  {pn} ðŸ¤£ ðŸ¥°"
 		},
 		category: "fun"
 	},
 
 	langs: {
 		vi: {
-			error: "Rất tiếc, emoji %1 và %2 không mix được",
-			success: "Emoji %1 và %2 mix được %3 ảnh"
+			error: "Ráº¥t tiáº¿c, emoji %1 vÃ  %2 khÃ´ng mix Ä‘Æ°á»£c",
+			success: "Emoji %1 vÃ  %2 mix Ä‘Æ°á»£c %3 áº£nh"
 		},
 		en: {
 			error: "Sorry, emoji %1 and %2 can't mix",
