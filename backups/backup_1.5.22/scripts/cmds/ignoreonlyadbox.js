@@ -1,11 +1,8 @@
-const ignoreList = global.GoatBot.config.adminOnly.ignoreCommand;
-const fs = require("fs-extra");
-
 module.exports = {
 	config: {
-		name: "ignoreonlyad",
-		aliases: ["ignoreadonly", "ignoreonlyadmin", "ignoreadminonly"],
-		version: "1.1",
+		name: "ignoreonlyadbox",
+		aliases: ["ignoreadboxonly", "ignoreadminboxonly"],
+		version: "1.0",
 		author: "NTKhang",
 		countDown: 5,
 		role: 2,
@@ -14,17 +11,13 @@ module.exports = {
 			en: "Ignore command in adminonly"
 		},
 		longDescription: {
-			vi: "Bỏ qua lệnh trong adminonly (khi bật adminonly, các lệnh được thêm từ lệnh này người dùng vẫn có thể sử dụng)",
+			vi: "Bỏ qua lệnh trong adminonly (khi bật adminonly, các lệnh được thêm từ lệnh này người dung vẫn có thể sử dụng)",
 			en: "Ignore command in adminonly (when turn on adminonly, user can use command added from this command)"
 		},
 		category: "owner",
 		guide: {
-			vi: "   {pn} add <commandName>: Thêm lệnh vào danh sách bỏ qua"
-				+ "\n   {pn} del <commandName>: Xóa lệnh khỏi danh sách bỏ qua"
-				+ "\n   {pn} list: Xem danh sách lệnh bỏ qua",
-			en: "   {pn} add <commandName>: Add command to ignore list"
-				+ "\n   {pn} del <commandName>: Remove command from ignore list"
-				+ "\n   {pn} list: View ignore list"
+			vi: "   {pn} add <commandName>: Thêm lệnh vào danh sách bỏ qua\n   {pn} del <commandName>: Xóa lệnh khỏi danh sách bỏ qua\n   {pn} list: Xem danh sách lệnh bỏ qua",
+			en: "   {pn} add <commandName>: Add command to ignore list\n   {pn} del <commandName>: Remove command from ignore list\n   {pn} list: View ignore list"
 		}
 	},
 
@@ -37,7 +30,7 @@ module.exports = {
 			commandAdded: "✅ Đã thêm lệnh \"%1\" vào danh sách bỏ qua",
 			commandNotInList: "❌ Lệnh \"%1\" không có trong danh sách bỏ qua",
 			commandDeleted: "✅ Đã xóa lệnh \"%1\" khỏi danh sách bỏ qua",
-			ignoreList: "📑 Danh sách lệnh bỏ qua trong adminonly:\n%1"
+			ignoreList: "📑 Danh sách lệnh bỏ qua trong nhóm bạn:\n%1"
 		},
 		en: {
 			missingCommandNameToAdd: "⚠️ Please enter the command name you want to add to the ignore list",
@@ -47,11 +40,12 @@ module.exports = {
 			commandAdded: "✅ Added command \"%1\" to ignore list",
 			commandNotInList: "❌ Command \"%1\" not in ignore list",
 			commandDeleted: "✅ Removed command \"%1\" from ignore list",
-			ignoreList: "📑 Ignore list in adminonly:\n%1"
+			ignoreList: "📑 Ignore list in your group:\n%1"
 		}
 	},
 
-	onStart: async function ({ args, message, getLang }) {
+	onStart: async function ({ args, message, threadsData, getLang, event }) {
+		const ignoreList = await threadsData.get(event.threadID, "data.ignoreCommanToOnlyAdminBox", []);
 		switch (args[0]) {
 			case "add": {
 				if (!args[1])
@@ -63,7 +57,7 @@ module.exports = {
 				if (ignoreList.includes(commandName))
 					return message.reply(getLang("commandAlreadyInList", commandName));
 				ignoreList.push(commandName);
-				fs.writeFileSync(global.client.dirConfig, JSON.stringify(global.GoatBot.config, null, 2));
+				await threadsData.set(event.threadID, ignoreList, "data.ignoreCommanToOnlyAdminBox");
 				return message.reply(getLang("commandAdded", commandName));
 			}
 			case "del":
@@ -77,10 +71,11 @@ module.exports = {
 				const command = global.GoatBot.commands.get(commandName);
 				if (!command)
 					return message.reply(getLang("commandNotFound", commandName));
+
 				if (!ignoreList.includes(commandName))
 					return message.reply(getLang("commandNotInList", commandName));
 				ignoreList.splice(ignoreList.indexOf(commandName), 1);
-				fs.writeFileSync(global.client.dirConfig, JSON.stringify(global.GoatBot.config, null, 2));
+				await threadsData.set(event.threadID, ignoreList, "data.ignoreCommanToOnlyAdminBox");
 				return message.reply(getLang("commandDeleted", commandName));
 			}
 			case "list": {
