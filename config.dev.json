@@ -93,11 +93,11 @@
     "notes": "this feature will automatically load the script when scripts have been changed, you can set ignoreCmds to ignore commands, ignoreEvents to ignore events, separate by comma or space, example: \"cmd1.js cmd2.js cmd3.js\" (without backslash)"
   },
   "autoRefreshFbstate": true,
-  "autoReloginWhenChangeAccount": false,
+  "autoReloginWhenChangeAccount": true,
   "autoRestartWhenListenMqttError": false,
   "restartListenMqtt": {
     "enable": true,
-    "timeRestart": 36000,
+    "timeRestart": 360000,
     "delayAfterStopListening": 2000,
     "logNoti": true,
     "notes": "the value of timeRestart and delayAfterStopListening is milisecond, You shouldn't edit this if you don't know what it is"
