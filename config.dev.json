@@ -17,15 +17,29 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "61550037082227",
-    "61554374941372"
+    "61557780285734",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "GOD": [
+    "61557780285734",
+    ""
+  ],
+  "DEV": [
+    "61557780285734",
+    ""
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "",
+  "nickNameBot": "𓆩𝙀𝙇𝙄𝙏𝙀 𝙀𝙁-𝙋𝙍𝙄𝙈𝙀 ",
+  "authorName": "Frank kaumba",
+  "authorFB": "https://www.facebook.com/profile.php?id=61557780285734",
+  "authorEmail": "efkidgamer@gmail.com",
   "prefix": "/",
   "database": {
     "type": "sqlite",
@@ -34,18 +48,18 @@
     "autoRefreshThreadInfoFirstTime": true,
     "notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when you set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
   },
-  "timeZone": "Asia/Ho_Chi_Minh",
+  "timeZone": "Asia/Dhaka",
   "credentials": {
     "gmailAccount": {
-      "email": "kramn1205@gmail.com",
-      "clientId": "407168939339-ni7uvp8054bpnht4280n6d3no4qrf3mv.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//041Aj0DBzlyxuCgYIARAAGAQSNwF-L9IrSJFfXahDmIC5CaNNthQwg0yT8ZrFaUUofZBR13qsh-nNBLi7_4LZMlZ00F8AiWo6Moo",
+      "email": "andylabaco@gmail.com",
+      "clientId": "96871167660-5js0qjdlpr2mcd331kv5obpifev5j69r.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04qK_zxJkdK7RCgYIARAAGAQSNwF-L9IrZOdI4prCgpqvAoDEvn-HpuSugKxBTRNoGS37QwxfAWJUCehSKhdas26xOh-SjmdR4uw",
       "apiKey": ""
     },
     "gRecaptcha": {
-      "siteKey": "6LdtgYMoAAAAABS1V6_RlEsUXf7dNLIzbc4EPhbt",
-      "secretKey": "6LdtgYMoAAAAAKXtH5f06qZBq28VXXqOb6rOSGQ5"
+      "siteKey": "6LfDe7QmAAAAAMdncmzO8RDLROsn_U-VPkuV_LzZ",
+      "secretKey": "6LfDe7QmAAAAAOyLAlcnK-YxCVWwzdjow-h5pNJg"
     }
   },
   "dashBoard": {
@@ -83,7 +97,7 @@
   "autoRestartWhenListenMqttError": false,
   "restartListenMqtt": {
     "enable": true,
-    "timeRestart": 3600000,
+    "timeRestart": 36000,
     "delayAfterStopListening": 2000,
     "logNoti": true,
     "notes": "the value of timeRestart and delayAfterStopListening is milisecond, You shouldn't edit this if you don't know what it is"
@@ -138,11 +152,5 @@
     "autoMarkDelivery": false,
     "autoReconnect": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
-  },
-  "whiteListModeThread": {
-    "enable": false,
-    "whiteListThreadIds": [],
-    "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
-    "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
   }
 }
