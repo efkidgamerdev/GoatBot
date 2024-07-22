@@ -12,7 +12,7 @@ const doNotDelete = "🇲🇼|Prime bot";
 
 module.exports = {
 	config: {
-		name: "help4",
+		name: "help",
 		version: "1.17",
 		author: "Aesther & Frank kaumba",
 		countDown: 5,
