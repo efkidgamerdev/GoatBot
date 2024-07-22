@@ -38,8 +38,8 @@ module.exports = {
       confirmThisThread: "Please react to this message to confirm the prefix change for your chat box",
       successGlobal: "The prefix of the bot system has been changed to: %1",
       successThisThread: "The prefix of your chat box has been changed to: %1",
-      myPrefix: "🌐 Bot System Prefix: %1\nYour Chat Box Prefix: %2\nPhilippines Timezone: %3",
-      philippinesTimezone: "🇵🇭 Philippines Timezone: GMT+8"
+      myPrefix: "🌐 Bot System Prefix: %1\nYour Chat Box Prefix: %2\nMalawi Timezone: %3",
+      philippinesTimezone: "Malawian Timezone: GMT+2"
     },
     en: {
       reset: "Your prefix has been reset to default: %1",
@@ -48,8 +48,8 @@ module.exports = {
       confirmThisThread: "Please react to this message to confirm the prefix change for your chat box",
       successGlobal: "The prefix of the bot system has been changed to: %1",
       successThisThread: "The prefix of your chat box has been changed to: %1",
-      myPrefix: "🌐 Bot System Prefix: %1\n🛸 Your Chat Box Prefix: %2\nPrefix executed time (Asia/Manila): %3",
-      philippinesTimezone: "🇵🇭 Philippines Timezone: GMT+8"
+      myPrefix: "🌐 Bot System Prefix: %1\n🛸 Your Chat Box Prefix: %2\nPrefix executed time (Africa/Malawi): %3",
+      MalawianTimezone: " Malawian Timezone: GMT+2"
     }
   },
 
@@ -109,7 +109,7 @@ module.exports = {
     }
     else if (event.body && event.body.toLowerCase() === "timezone philippines") {
       return () => {
-        return message.reply(getLang("philippinesTimezone"));
+        return message.reply(getLang("Malawian timezone"));
       };
     }
   }
