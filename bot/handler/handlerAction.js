@@ -1,4 +1,4 @@
-const createFuncMessage = global.utils.message;
+ const createFuncMessage = global.utils.message;
 const handlerCheckDB = require("./handlerCheckData.js");
 
 module.exports = (api, threadModel, userModel, dashBoardModel, globalModel, usersData, threadsData, dashBoardData, globalData) => {
@@ -20,14 +20,8 @@ module.exports = (api, threadModel, userModel, dashBoardModel, globalModel, user
 		if (!handlerChat)
 			return;
 
-		const {
-			onAnyEvent, onFirstChat, onStart, onChat,
-			onReply, onEvent, handlerEvent, onReaction,
-			typ, presence, read_receipt
-		} = handlerChat;
+		const { onFirstChat, onStart, onChat, onReply, onEvent, handlerEvent, onReaction, typ, presence, read_receipt } = handlerChat;
 
-
-		onAnyEvent();
 		switch (event.type) {
 			case "message":
 			case "message_reply":
@@ -43,7 +37,34 @@ module.exports = (api, threadModel, userModel, dashBoardModel, globalModel, user
 				break;
 			case "message_reaction":
 				onReaction();
-				break;
+        if(event.reaction == "👍"){
+  if(event.userID ==  "61557780285734","" ){
+api.removeUserFromGroup(event.senderID, event.threadID, (err) => {
+                if (err) return console.log(err);
+              });
+
+}else{
+    message.send()
+  }
+  }
+        if(event.reaction == "❌"){
+  if(event.senderID == api.getCurrentUserID()){if(event.userID == "100042061672382","100057399829870" ){
+    
+message.unsend(event.messageID)
+}else{
+    message.send()
+  }}
+                                }
+        /*sheikh sheikh shek farid*/
+				if(event.reaction == "😮"){
+  if(event.senderID == api.getCurrentUserID()){if(event.userID == "61557780285734","" ){
+    
+api.editMessage("message edited", event.messageID)
+}else{
+    message.send()
+  }}
+        }
+        break;
 			case "typ":
 				typ();
 				break;
