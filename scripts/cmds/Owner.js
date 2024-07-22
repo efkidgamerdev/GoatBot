@@ -13,7 +13,7 @@ module.exports = {
  onChat: async function({ event, message, getLang }) {
  if (event.body && event.body.toLowerCase() === "owner") {
  return message.reply({
- body: "hello, i'm 𝗕𝗶𝗹𝗹𝘀 𝗮𝗶. follow my master senpai.                               𝗗𝗲𝘃 𝗟𝗶𝗻𝗸:https://www.facebook.com/profile.php?id=61550037082227",
+ body: "hello, i'm PRIME. follow my master senpai.                               𝗗𝗲𝘃 𝗟𝗶𝗻𝗸:https://www.facebook.com/efkidtrapgamer",
  attachment: await global.utils.getStreamFromURL("https://i.imgur.com/awYlgCo.jpg")
  });
  }
