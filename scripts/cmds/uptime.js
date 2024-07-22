@@ -68,7 +68,7 @@ module.exports = {
         "Enjoy your time with the bot!",
         "Feel free to ask me anything!",
         "Let the bot bring some joy to your day!",
-        "Marin BoT: Did you know the bot loves coding?",
+        "EF PRIME BoT: Did you know the bot loves coding?",
         "Thanks for having me in your Group!",
         "Ready for some cool commands? Just ask!",
         "Bot fun fact: I can generate random jokes!",
