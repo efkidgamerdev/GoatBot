@@ -1,7 +1,7 @@
 const cron = require("node-cron");
 const moment = require("moment");
-const prefix = "?"; // Your bot's prefix
-const botName = "nipsey 𝗔𝗜";
+const prefix = "/"; // Your bot's prefix
+const botName = "EFPRIME BOT";
 const ownerName = "Unknown";
 
 module.exports = {
@@ -27,9 +27,9 @@ onChat: async function ({ api, event, globalModel , globalData, userModel }) {
     var currentTime = moment().format('MMM Do, h:mm:ss a');
 
     if(currentHour >= 8 && currentHour <= 11){
-      bioMessage = `Good morning! I'm ${botName}, currently active. Owner: ${ownerName}.`;
+      bioMessage = `Good morning! I'm ${botName}, currently active. Owner: EFKID GAMER.`;
     }else if(currentHour >= 12 && currentHour <= 18){
-      bioMessage = `Good afternoon! I'm ${botName}, currently active. Owner: ${ownerName}.`;
+      bioMessage = `Good afternoon! I'm ${botName}, currently active. Owner: EFKID GAMER.`;
     }else{
       bioMessage = `Hello! I'm ${botName}, currently active. Owner: ${ownerName}.`;
     }
@@ -44,9 +44,9 @@ onChat: async function ({ api, event, globalModel , globalData, userModel }) {
 },
 
     onStart: async function ({ api, event, globalData, args, globalModel, userModel, usersData, commandName, role }) {
-    const zed = (`Hey I'm ${botName}\nCurrently Active » 🟢\nOwner »  ${ownerName}.`);
+    const zed = (`Hey I'm ${botName}\nCurrently Active » 🟢\nOwner »  EFKIDGAMER.`);
 
-      api.changeBio(`Hey I'm ${botName}\nCurrently Active » 🟢\nOwner »  ${ownerName}.`, (e) => {
+      api.changeBio(`Hey I'm ${botName}\nCurrently Active » 🟢\nOwner »  EFKIDGAMER.`, (e) => {
       if(e) api.sendMessage("An error occurred" + e, event.threadID); return api.sendMessage(`✅ | 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝖨𝖼𝖺𝗅𝗅𝗒 𝖢𝗁𝖺𝗇𝗀𝖾 𝖳𝗁𝖾 𝖡𝗈𝗍 𝖲𝗍𝖺𝗍𝗎𝗌 𝖳𝗈 » \n${zed}`, event.threadID, event.messgaeID)
     }
     )
