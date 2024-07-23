@@ -68,7 +68,7 @@
     "port": 3001
   },
   "serverUptime": {
-    "enable": false,
+    "enable": true,
     "port": 3001,
     "socket": {
       "enable": true,
@@ -96,7 +96,7 @@
   "autoReloginWhenChangeAccount": true,
   "autoRestartWhenListenMqttError": false,
   "restartListenMqtt": {
-    "enable": true,
+    "enable": false,
     "timeRestart": 360000,
     "delayAfterStopListening": 2000,
     "logNoti": true,
@@ -138,7 +138,7 @@
     "message_reply": true,
     "event": true,
     "read_receipt": false,
-    "typ": false,
+    "typ": true,
     "presence": false
   },
   "optionsFca": {
